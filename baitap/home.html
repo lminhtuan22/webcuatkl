@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COCKSTOCK - Nghệ thuật xỏ khuyên</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section with Overlay Header -->
+    <section class="hero">
+        <!-- This background would be the hero image -->
+        
+        <!-- Header/Navigation Bar as Overlay -->
+        <header>
+            <div class="header-container">
+                <a href="#" class="logo">COCKSTOCK</a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#" class="active">Services</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-outline">Log in</a>
+                    <a href="#" class="btn btn-filled">Sign up</a>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="star-decoration left">✦</div>
+                <div class="about-text">
+                    <p>Chúng mình bắt đầu tìm hiểu về khuyên tai & nghệ thuật xỏ khuyên từ 2014. Hành trình 11 năm đã cho COCKSTOCK nhiều kinh nghiệm, dần dần trở thành thương hiệu tiên phong trong trải nghiệm dịch vụ.</p>
+                    <p>COCKSTOCK tự hào vì đã mang nghệ thuật xỏ khuyên vào phong cách sống của khách hàng ở nhiều lứa tuổi khác nhau.</p>
+                </div>
+                <div class="star-decoration right">✦</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="piercing-guide">
+        <div class="container-guide">
+            <!-- Section Title -->
+            <h2 class="section-title">CÁC VỊ TRÍ XỎ KHUYÊN TAI</h2>
+    
+            <!-- Toggle Buttons -->
+            <div class="toggle-container">
+                <button class="toggle-btn active">Cơ bản</button>
+                <button class="toggle-btn">Nâng cao</button>
+            </div>
+    
+            <!-- Piercing Info Card -->
+            <div class="piercing-card">
+                <div class="piercing-visual">
+                    <img src="/lobe.jpg" alt="Hình ảnh tai với vị trí xỏ khuyên" class="ear-image" id="earImage">
+                    <!-- Position Markers -->
+                    <div class="position-marker marker-1" onclick="showInfo('lobe')">
+                        <span class="marker-number">1</span>
+                        <span class="marker-label">Lobe</span>
+                    </div>
+    
+                    <div class="position-marker marker-2" onclick="showInfo('helix')">
+                        <span class="marker-number">2</span>
+                        <span class="marker-label">Helix</span>
+                    </div>
+     
+                    <!-- Price Tag -->
+                    <div class="price-tag">
+                        <span>99.000</span>
+                    </div>
+                </div>
+    
+                <!-- Info Panel -->
+                <!-- Thông tin Lobe -->
+                <div class="piercing-info" id="lobe-info">
+                    <h3 class="piercing-title">Xỏ lỗ cơ bản (Lobe)</h3>
+                    <div class="healing-info">
+                        <div class="healing-column">
+                            <h4 class="healing-title" style="white-space: nowrap;">THỜI GIAN DOWNSIZE</h4>
+                            <p class="healing-time">1 - 1.5 tháng</p>
+                        </div>
+                        <div class="healing-column">
+                            <h4 class="healing-title" style="white-space: nowrap;">THỜI GIAN ỔN ĐỊNH LỖ XỎ</h4>
+                            <p class="healing-time">3 - 5 tháng</p>
+                        </div>
+                    </div>
+                    <div class="example-image">
+                        <img src="/tai-real.jpg" alt="Ví dụ khuyên tai lobe" class="example-img">
+                    </div>
+                </div>
+
+                <!-- Thông tin Helix -->
+                <div class="piercing-info" id="helix-info" style="display:none">
+                    <h3 class="piercing-title">Xỏ Helix (phần vành tai trên)</h3>
+                    <div class="healing-info">
+                        <div class="healing-column">
+                            <h4 class="healing-title" style="white-space: nowrap;">THỜI GIAN DOWNSIZE</h4>
+                            <p class="healing-time">2 - 3 tháng</p>
+                        </div>
+                        <div class="healing-column">
+                            <h4 class="healing-title" style="white-space: nowrap;">THỜI GIAN ỔN ĐỊNH LỖ XỎ</h4>
+                            <p class="healing-time">6 - 9 tháng</p>
+                        </div>
+                    </div>
+                    <div class="example-image">
+                        <img src="/tai-real.jpg" alt="Ví dụ khuyên tai helix" class="example-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="piercing-guide">
+        <div class="container-guide">
+            <h2 class="section-title">CÁC VỊ TRÍ XỎ KHUYÊN CƠ THỂ</h2>
+
+            <div class="piercing-card">
+                <div class="piercing-visual">
+                    <!-- Image Slider Integration -->
+                    <div class="image-slider">
+                        <div class="slider-container" id="sliderContainer">
+                            <div class="slide">
+                                <img src="/bung.jpg" alt="Hình ảnh bụng với vị trí xỏ khuyên" class="slider-image">
+                            </div>
+                            <div class="slide">
+                                <img src="/bung2.jpg" alt="Hình ảnh bụng với vị trí xỏ khuyên khác" class="slider-image">
+                            </div>
+                            <div class="slide">
+                                <img src="/bung3.jpg" alt="Hình ảnh bụng với vị trí xỏ khuyên thứ ba" class="slider-image">
+                            </div>
+                        </div>
+                        
+                        <!-- Slider Controls -->
+                        <div class="slider-controls">
+                            <button class="prev-btn" id="prevBtn">&#8249;</button>
+                            <button class="next-btn" id="nextBtn">&#8250;</button>
+                        </div>
+                        
+                        <!-- Slider Dots -->
+                        <div class="slider-dots" id="sliderDots">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                            <span class="dot" data-index="2"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="piercing-info">
+                    <h3 class="piercing-title">Xỏ rốn (Belly Button)</h3>
+                    
+                    <div class="healing-info">
+                        <div class="healing-column">
+                            <h4 class="healing-title" style="white-space: nowrap;">THỜI GIAN DOWNSIZE</h4>
+                            <p class="healing-time">1 - 1.5 tháng</p>
+                        </div>
+                        
+                        <div class="healing-column">
+                            <h4 class="healing-title" style="white-space: nowrap;">THỜI GIAN ỔN ĐỊNH LỖ XỎ</h4>
+                            <p class="healing-time">3 - 5 tháng</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Image -->
+                    <div class="example-image">
+                        <img src="/bung-real.jpg" alt="Ví dụ khuyên tai lobe" class="example-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price List Section -->
+    <section class="services-list">
+        <div class="container">
+            <h2 class="section-title">TỔNG HỢP BẢNG GIÁ XỎ KHUYÊN TAI</h2>
+            
+            <div class="price-list">
+                <!-- Price Items -->
+                <div class="price-item">
+                    <span class="price-name">Lobe, Upper Lobe</span>
+                    <span class="price-value">99.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Helix</span>
+                    <span class="price-value">135.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Forward Helix</span>
+                    <span class="price-value">149.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Rook, Daith, Snug</span>
+                    <span class="price-value">149.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Flat</span>
+                    <span class="price-value">149.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Conch</span>
+                    <span class="price-value">149.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Tragus/Anti-Tragus</span>
+                    <span class="price-value">149.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Industrial</span>
+                    <span class="price-value">210.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-list">
+        <div class="container">
+            <h2 class="section-title">TỔNG HỢP BẢNG GIÁ XỎ CƠ THỂ</h2>
+            
+            <div class="price-list">
+                <!-- Price Items -->
+                <div class="price-item">
+                    <span class="price-name">Nostril</span>
+                    <span class="price-value">180.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Septum</span>
+                    <span class="price-value">270.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Navel</span>
+                    <span class="price-value">230.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Collarbone</span>
+                    <span class="price-value">210.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Nipple</span>
+                    <span class="price-value">270.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Lips</span>
+                    <span class="price-value">210.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Lipskin</span>
+                    <span class="price-value">270.000</span>
+                </div>
+                
+                <div class="price-item">
+                    <span class="price-name">Smiley</span>
+                    <span class="price-value">270.000</span>
+                </div>
+
+                <div class="price-item">
+                    <span class="price-name">Tongue/Head-Tongue</span>
+                    <span class="price-value">270.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Appointment Section -->
+    <section class="appointment-section">
+        <div class="container">
+            <h2 class="section-title">ĐẶT LỊCH XỎ</h2>
+            
+            <div class="star-decoration left-star">✦</div>
+            
+            <div class="appointment-list">
+                <div class="appointment-item">
+                    <div class="number-badge">1</div>
+                    <div class="appointment-text">Địa chỉ các cơ sở</div>
+                    <div class="arrow-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="#E25B31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="appointment-item">
+                    <div class="number-badge">2</div>
+                    <div class="appointment-text">Lịch xỏ khuyên</div>
+                    <div class="arrow-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="#E25B31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="appointment-item">
+                    <div class="number-badge">3</div>
+                    <div class="appointment-text">Bảng giá xỏ</div>
+                    <div class="arrow-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="#E25B31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="star-decoration right-star">✦</div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="commitment-section">
+        <div class="container">
+            <h2 class="section-title">COCKSTOCK CAM KẾT</h2>
+            
+            <div class="commitment-list">
+                <div class="commitment-item">
+                    <div class="number-circle">1</div>
+                    <div class="commitment-text">Đội ngũ thợ xỏ lành nghề, giàu kiến thức chuyên môn và kinh nghiệm</div>
+                </div>
+                
+                <div class="commitment-item">
+                    <div class="number-circle">2</div>
+                    <div class="commitment-text">Quy trình xỏ khuyên an toàn, êm ái; phòng xỏ khép kín, hiện đại</div>
+                </div>
+                
+                <div class="commitment-item">
+                    <div class="number-circle">3</div>
+                    <div class="commitment-text">Chăm sóc & hỗ trợ thường trực từ đội ngũ nhân viên y tế</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Aftercare Service Section -->
+    <section class="aftercare-service">
+        <div class="container">
+            <div class="aftercare-content">
+                <div class="aftercare-info">
+                    <h2 class="section-title text-left">DỊCH VỤ CHĂM SÓC HẬU XỎ</h2>
+                    
+                    <div class="aftercare-description">
+                        <p>Địa chỉ đầu tiên Việt Nam cung cấp dịch vụ kiểm tra & chăm sóc lỗ xỏ hoàn toàn miễn phí.</p>
+                        
+                        <p>Để có những lỗ xỏ "khỏe mạnh", COCKSTOCK luôn luôn quan tâm đặc biệt tới việc xây dựng quy trình chăm sóc y tế cho khách hàng một cách chỉn chu. Đội ngũ nhân viên y tế của chúng tôi chuyên nghiệp, có tâm và tôn trọng khách hàng.</p>
+                    </div>
+                    
+                    <div class="aftercare-buttons">
+                        <a href="#" class="btn btn-primary">Cách chăm sóc lỗ xỏ</a>
+                        <a href="#" class="btn btn-primary">Liên hệ COCKSTOCK</a>
+                    </div>
+                </div>
+                
+                <div class="aftercare-image">
+                    <img src="/hauxoimg.jpg" alt="Hình ảnh chăm sóc hậu xỏ" class="model-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="/logho.jpg" alt="COCKSTOCK Logo" class="logo-image">
+                    <div class="star-decoration footer-star">✦</div>
+                </div>
+                
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3 class="footer-heading">HOTLINE</h3>
+                        <p class="footer-text">0915.880.298</p>
+                        <p class="footer-text">cskh@cockstock.com.vn</p>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-heading">CHI NHÁNH HÀ NỘI</h3>
+                        <p class="footer-text">34A Cao Bá Quát, Q. Ba Đình</p>
+                        <p class="footer-text">100 Tam Khương, Q. Đống Đa</p>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-heading">CONTACT US</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                            <a href="#" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+                            <a href="#" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.53.02C13.84 0 15.14.01 16.44.02c1.3 0 2.61.01 3.91.02.82.01 1.59.17 2.28.55.86.5 1.41 1.24 1.65 2.21.08.35.11.71.13 1.07.01.21.01.42.01.63v13.96c0 .3-.01.59-.04.89-.09.97-.31 1.86-.98 2.6-.64.73-1.43 1.15-2.37 1.35-.31.06-.61.09-.92.09-6.35.01-12.7.01-19.05 0-.33 0-.66-.03-.98-.1-.8-.17-1.48-.54-2.03-1.14-.71-.77-1.06-1.7-1.12-2.74-.02-.28-.02-.56-.02-.84V5.12c0-.3.01-.59.03-.89.08-.92.32-1.77.9-2.52.71-.9 1.62-1.45 2.75-1.63.28-.05.57-.06.85-.06h4.47c.82.01 1.65.01 2.47.01zm-.02 21.5c1.29 0 2.59-.01 3.88-.01 1.32 0 2.64-.01 3.96-.02.22 0 .44-.02.66-.06.83-.14 1.42-.6 1.63-1.41.08-.32.12-.65.12-.98v-6.92c0-2.38 0-4.75.01-7.13 0-.25-.02-.51-.09-.75-.17-.57-.53-.97-1.09-1.16-.35-.12-.71-.14-1.08-.14-5.04-.01-10.08-.01-15.12 0-.26 0-.52.01-.78.05-.46.08-.86.29-1.14.67-.32.42-.44.9-.44 1.42v14.32c0 .41.05.81.22 1.18.28.63.77 1.02 1.44 1.14.28.05.56.07.84.07 2.32.01 4.65.01 6.98.01zM6.8 12.01c0-1.49.5-2.84 1.52-3.95C9.43 7 10.79 6.47 12.3 6.5c2.87.05 5.3 2.45 5.32 5.38.03 2.96-2.42 5.37-5.38 5.4-2.85.02-5.3-2.45-5.33-5.28h-.01zm9.08 0c0-2.07-1.69-3.76-3.76-3.76C10.08 8.24 8.4 9.91 8.4 12c0 2.08 1.68 3.75 3.76 3.75 2.12.01 3.76-1.67 3.76-3.74h-.04zm3.04-4.58c0 .69-.56 1.26-1.25 1.26-.67 0-1.26-.58-1.26-1.25 0-.69.57-1.26 1.26-1.26.69-.01 1.25.56 1.25 1.25z"></path></svg></a>
+                            <a href="#" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"/></svg></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-heading">CHI NHÁNH SÀI GÒN</h3>
+                        <p class="footer-text">112 Điện Biên Phủ, P. Đa Kao, Q.1</p>
+                        <p class="footer-text">285/46 Cách Mạng Tháng 8, P.12, Q.10</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">COCKSTOCK (C) 2022 | HỘ KINH DOANH CỦA HẰNG CÁ TRỒNG</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Initialize the slider once the page is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get elements
+            const sliderContainer = document.getElementById('sliderContainer');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dots = document.querySelectorAll('.dot');
+            
+            // Set variables
+            let currentIndex = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+            
+            // Function to update the slider position
+            function updateSliderPosition() {
+                sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update active dot
+                dots.forEach((dot, index) => {
+                    if (index === currentIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Event listeners for navigation buttons
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+                updateSliderPosition();
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+                updateSliderPosition();
+            });
+            
+            // Event listeners for dots
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    currentIndex = parseInt(dot.getAttribute('data-index'));
+                    updateSliderPosition();
+                });
+            });
+            
+            // Auto slide
+            let autoSlideInterval = setInterval(() => {
+                currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+                updateSliderPosition();
+            }, 5000);
+            
+            // Pause auto slide on hover
+            sliderContainer.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideInterval);
+            });
+            
+            sliderContainer.addEventListener('mouseleave', () => {
+                autoSlideInterval = setInterval(() => {
+                    currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+                    updateSliderPosition();
+                }, 5000);
+            });
+        });
+
+    function showInfo(type) {
+        const earImage = document.getElementById('earImage');
+        const lobeInfo = document.getElementById('lobe-info');
+        const helixInfo = document.getElementById('helix-info');
+
+        if (type === 'lobe') {
+            earImage.src = '/lobe.jpg'; // Đường dẫn hình ảnh đánh dấu Lobe
+            lobeInfo.style.display = 'block';
+            helixInfo.style.display = 'none';
+        } else if (type === 'helix') {
+            earImage.src = '/helix.jpg'; // Đường dẫn hình ảnh đánh dấu Helix
+            lobeInfo.style.display = 'none';
+            helixInfo.style.display = 'block';
+        }
+    }
+
+        </script>
+</body>
+</html>
