@@ -1,0 +1,1221 @@
+/* Base Styles */
+:root {
+    --primary: #E25B31;
+    --bg-cream: #FFF7ED;
+    --text-dark: #333;
+    --white: #ffffff;
+    --border-color: #E25B31;
+    --light-coral: rgba(226, 91, 49, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container-guide {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    max-height: 850px;
+    margin: 0 auto;
+    padding: 0 150px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: url('/d57915f0-df76-4da9-81ab-e32e8f71bfd5.jpg'); /* Replace with your hero image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles as Overlay */
+header {
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    z-index: 100;
+    padding: 0 20px;
+}
+
+.header-container {
+    max-width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--primary);
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background-color: transparent;
+}
+
+.btn-filled {
+    background-color: var(--primary);
+    color: white;
+    border: 1px solid var(--primary);
+}
+
+/* Hero Content */
+.hero-content {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+}
+
+.overlay-logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.location-info {
+    font-size: 12px;
+    opacity: 0.9;
+    line-height: 1.3;
+}
+
+/* About Section */
+.about {
+    padding: 60px 0;
+    position: relative;
+}
+
+.about-content {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.about-text {
+    color: var(--primary);
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.star-decoration {
+    color: var(--primary);
+    font-size: 32px;
+    position: absolute;
+}
+
+.star-decoration.left {
+    top: 10px;
+    left: -30px;
+}
+
+.star-decoration.right {
+    bottom: 10px;
+    right: -30px;
+}
+
+/* Piercing Guide Section */
+.piercing-guide {
+    padding: 60px 0;
+}
+
+.section-title {
+    color: var(--primary);
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Toggle Buttons */
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.toggle-btn {
+    padding: 12px 40px;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.toggle-btn:not(.active) {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+/* Piercing Card */
+.piercing-card {
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--white);
+    flex-wrap: wrap;
+}
+
+/* Piercing Visual Side */
+.piercing-visual {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--border-color);
+    display: inline-block;
+}
+
+.ear-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    color: #d04a2e;
+    font-weight: 500;
+}
+
+/* Position Markers */
+.position-marker {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.marker-1 {
+    bottom: 25%;
+    right: 25%;
+}
+
+.marker-2 {
+    top: 35%;
+    right: 30%;
+}
+
+.marker-number {
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.marker-1 {
+    top: 58%;   /* gần đáy tai */
+    left: 37%;
+}
+
+/* 🎯 Vị trí nhãn "Helix" */
+.marker-2 {
+    top: 20%;   /* gần vành tai trên */
+    left: 80%;
+}
+
+.marker-label {
+    color: var(--primary);
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Price Tag */
+.price-tag {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* Piercing Info Side */
+.piercing-info {
+    flex: 1;
+    padding: 30px;
+}
+
+
+.piercing-title {
+    color: var(--primary);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+/* Healing Info */
+.healing-info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.healing-column {
+    flex: 1;
+}
+
+.healing-title {
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.healing-time {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Example Image */
+.example-image {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.example-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Image Slider Styles */
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Slider Controls */
+.slider-controls {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    pointer-events: none;
+}
+
+.prev-btn, .next-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    opacity: 0.8;
+    pointer-events: auto;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: var(--primary);
+    opacity: 1;
+}
+
+/* Slider Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--primary);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .piercing-card {
+        flex-direction: column;
+    }
+    
+    .piercing-visual {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 40px 20px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .piercing-title {
+        font-size: 24px;
+    }
+    
+    .header-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .logo {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .main-nav {
+        flex-basis: 100%;
+        margin: 5px 0;
+    }
+    
+    .main-nav ul {
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .auth-buttons {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .toggle-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .toggle-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .healing-info {
+        flex-direction: column;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .header-container {
+        border-radius: 20px;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .auth-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .btn {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Services List / Price List Section */
+.services-list {
+    padding: 60px 0;
+    background-color: var(--bg-cream);
+}
+
+.services-list .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.price-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--white);
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    position: relative;
+}
+
+.price-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.price-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.price-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--primary);
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+
+/* Responsive adjustments for price list */
+@media (max-width: 600px) {
+    .price-item {
+        padding: 12px 20px;
+    }
+    
+    .price-name {
+        font-size: 16px;
+    }
+    
+    .price-value {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+}
+
+/* Appointment Section */
+.appointment-section {
+    padding: 80px 0;
+    background-color: var(--bg-cream);
+    position: relative;
+    overflow: hidden;
+}
+
+.appointment-section .container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.star-decoration {
+    color: var(--primary);
+    font-size: 40px;
+    position: absolute;
+}
+
+.left-star {
+    top: 30px;
+    left: 10px;
+}
+
+.right-star {
+    bottom: 30px;
+    right: 10px;
+}
+
+.appointment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.appointment-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 50px;
+    padding: 15px 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.appointment-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.number-badge {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(226, 91, 49, 0.1);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.appointment-text {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.arrow-icon {
+    color: var(--primary);
+}
+
+/* Commitment Section */
+.commitment-section {
+    padding: 80px 0;
+    position: relative;
+    color: var(--white);
+    overflow: hidden; /* Important to contain the blur */
+    z-index: 1;
+}
+
+.commitment-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/anhcamket.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+
+.commitment-section .section-title {
+    color: var(--white);
+    margin-bottom: 50px;
+}
+
+.commitment-section .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.commitment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.commitment-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    padding: 15px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.number-circle {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.commitment-text {
+    flex: 1;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .appointment-item,
+    .commitment-item {
+        padding: 12px 20px;
+    }
+    
+    .appointment-text,
+    .commitment-text {
+        font-size: 16px;
+    }
+    
+    .number-badge,
+    .number-circle {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    
+    .star-decoration {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .appointment-text,
+    .commitment-text {
+        font-size: 14px;
+    }
+    
+    .commitment-item {
+        border-radius: 30px;
+    }
+}
+
+/* Aftercare Service Section */
+.aftercare-service {
+    padding: 80px 0;
+    background-color: #FFF0E8;
+}
+
+.aftercare-service .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.aftercare-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.aftercare-info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.aftercare-description {
+    margin: 25px 0;
+}
+
+.aftercare-description p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-dark);
+}
+
+.aftercare-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.btn-primary:hover {
+    background-color: #c94b22;
+    transform: translateY(-2px);
+}
+
+.aftercare-image {
+    flex: 1;
+    position: relative;
+}
+
+.model-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Footer Section */
+.footer {
+    background-color: var(--bg-cream);
+    padding: 60px 0 20px;
+    color: var(--primary);
+}
+
+.footer .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-image {
+    max-width: 200px;
+    height: auto;
+}
+
+.footer-star {
+    position: absolute;
+    top: 0;
+    right: 35%;
+    font-size: 28px;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-heading {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-text {
+    color: var(--primary);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #c94b22;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(226, 91, 49, 0.2);
+}
+
+.copyright {
+    color: var(--primary);
+    font-size: 12px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .aftercare-content {
+        flex-direction: column;
+    }
+    
+    .aftercare-info {
+        padding-right: 0;
+        order: 2;
+    }
+    
+    .aftercare-image {
+        order: 1;
+        margin-bottom: 30px;
+    }
+    
+    .aftercare-buttons {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-columns {
+        gap: 30px;
+    }
+    
+    .footer-column {
+        flex: 0 0 calc(50% - 15px);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-column {
+        flex: 0 0 100%;
+    }
+    
+    .aftercare-service {
+        padding: 50px 0;
+    }
+    
+    .footer {
+        padding: 40px 0 20px;
+    }
+}
+/* Updated slider styles */
+.image-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Fixed height for better display */
+    left: 0%;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    display: block;
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Slider Controls */
+  .slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    z-index: 10;
+  }
+  
+  .prev-btn, .next-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+  }
+  
+  .prev-btn:hover, .next-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  /* Slider Dots */
+  .slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 10;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: var(--primary);
+    transform: scale(1.2);
+  }
+  
+  /* Piercing Info Styles */
+  .piercing-info {
+    flex: 1;
+    padding: 30px;
+    position: relative;
+  }
+  
+  .piercing-description {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .piercing-description.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  .piercing-description h3 {
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .piercing-description p {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 180px;
+  }
+  
+  .piercing-description p::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 600;
+  }
+  
+  .example-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    .slider-container {
+      height: 300px;
+    }
+    
+    .piercing-description p {
+      padding-left: 0;
+      padding-top: 25px;
+    }
+    
+    .piercing-description p::before {
+      top: 0;
+      left: 0;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .slider-container {
+      height: 250px;
+    }
+    
+    .prev-btn, .next-btn {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+    }
+  }
+
+  .info-group.vertical {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 60px; /* khoảng cách giữa 2 khối */
+    margin-bottom: 20px;
+  }
+  
+  .info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .info-label {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  
+  .info-value {
+    color: var(--primary);
+    font-weight: 570;
+    font-size: 20px;
+  }
+  
+  
+  
