@@ -227,6 +227,7 @@ header {
     border-radius: 20px;
     overflow: hidden;
     background-color: var(--white);
+    flex-wrap: wrap;
 }
 
 /* Piercing Visual Side */
@@ -318,6 +319,7 @@ header {
     padding: 30px;
 }
 
+
 .piercing-title {
     color: var(--primary);
     font-size: 28px;
@@ -374,82 +376,83 @@ header {
 }
 
 .slider-container {
-    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    border-radius: 10%;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    min-width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s ease;
+  }
 
 .slider-image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    display: block;
+    object-fit: cover;
 }
 
 /* Slider Controls */
 .slider-controls {
     position: absolute;
+    top: 50%;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    top: 50%;
     transform: translateY(-50%);
-    padding: 0 10px;
-    pointer-events: none;
+    z-index: 10;
 }
 
 .prev-btn, .next-btn {
-    background-color: var(--primary);
+    background-color: rgba(226, 91, 49, 0.8);
     color: white;
     border: none;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    margin: 0 10px;
     transition: background-color 0.3s ease;
-    opacity: 0.8;
-    pointer-events: auto;
 }
 
 .prev-btn:hover, .next-btn:hover {
-    background-color: var(--primary);
-    opacity: 1;
+    background-color: rgba(226, 91, 49, 1);
 }
 
 /* Slider Dots */
 .slider-dots {
     position: absolute;
-    bottom: 15px;
+    bottom: 20px;
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
+    z-index: 10;
 }
 
 .dot {
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.dot.active {
-    background-color: var(--primary);
-}
 
 /* Responsive Design */
 @media (max-width: 900px) {
@@ -1016,3 +1019,317 @@ header {
         padding: 40px 0 20px;
     }
 }
+/* Updated slider styles */
+.image-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Fixed height for better display */
+    left: 0%;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    display: block;
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  
+  
+  /* Slider Dots */
+  .slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 10;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: var(--primary);
+    transform: scale(1.2);
+  }
+  
+  /* Piercing Info Styles */
+  .piercing-info {
+    flex: 1;
+    padding: 30px;
+    position: relative;
+  }
+  
+  .piercing-description {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .piercing-description.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  .piercing-description h3 {
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .piercing-description p {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 180px;
+  }
+  
+  .piercing-description p::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 600;
+  }
+  
+  .example-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    .slider-container {
+      height: 300px;
+    }
+    
+    .piercing-description p {
+      padding-left: 0;
+      padding-top: 25px;
+    }
+    
+    .piercing-description p::before {
+      top: 0;
+      left: 0;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .slider-container {
+      height: 250px;
+    }
+    
+    .prev-btn, .next-btn {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+    }
+  }
+
+  .info-group.vertical {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 60px; /* khoảng cách giữa 2 khối */
+    margin-bottom: 20px;
+  }
+  
+  .info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .info-label {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  
+  .info-value {
+    color: var(--primary);
+    font-weight: 570;
+    font-size: 20px;
+  }
+  
+.pierce-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pierce-heading {
+    text-align: center;
+    color: #E95420;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 600px;
+}
+
+.pierce-carousel-container {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--white);
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.pierce-carousel-slide {
+    display: none;
+    width: 100%;
+}
+
+.pierce-carousel-slide.pierce-active {
+    display: flex;
+}
+
+.pierce-carousel-image {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pierce-carousel-image img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pierce-carousel-info {
+    width: 50%;
+    padding: 20px;
+    border-left: 1px solid #FFD8C6;
+}
+
+.pierce-carousel-title {
+    color: #E95420;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.pierce-info-row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.pierce-info-column {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.pierce-info-title {
+    color: #E95420;
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.pierce-info-content {
+    color: #E95420;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.pierce-carousel-info-right img {
+    width: 100%;
+    border-radius: 0px;
+    margin-top: 10px;
+}
+
+.pierce-carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    pointer-events: none;
+}
+
+.pierce-nav-button {
+    background-color: transparent;
+    color: #E95420;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+.pierce-nav-button:hover {
+    opacity: 1;
+}
+
+.pierce-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.pierce-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FFD8C6;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pierce-indicator.pierce-active {
+    background-color: #E95420;
+}
+  
+  
